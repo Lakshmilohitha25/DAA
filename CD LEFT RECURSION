@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char nonterminal,alpha[10],beta[10];
+printf("Enter nonterminal:");
+    scanf("%c",&nonterminal);
+ printf("enter left-recursive production:");
+    scanf("%s",alpha);
+printf("enter non-recursive production:");
+    scanf("%s",beta);
+    printf("\ngiven production:%c->%s|%s",nonterminal,alpha,beta);
+ printf("\nEliminated left recursion:");
+    printf("\n%c->%s%c",nonterminal,beta,nonterminal);
+    printf("\n%c->%s%c'|E\n",nonterminal,alpha+1,nonterminal);
+ return 0;
+}
